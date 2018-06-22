@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/G-Cool-ThanosGo/iface"
+	"github.com/G-Cool-ThanosGo/model/schema"
 	"github.com/G-Cool-ThanosGo/util"
 	"github.com/gin-gonic/gin"
 )
@@ -41,9 +42,13 @@ func DodoReport(c *gin.Context) {
 	fmt.Println(filePath)
 	fmt.Println(purpose)
 
-	// step 2 根據參數判斷連線database
-	msqdbt1 := iface.MySqlDB{}
-	iface.ConnectDB(msqdbt1)
+	// step 2 連線至mysql
+	mysqldb := iface.MySqlDB{}
+	msqdb := mysqldb.Connect()
+	// get order id = 238
+	orders := schema.Orders{}
+	msqdb.Where("id = ?", 375).Find(&orders)
+	fmt.Println("this is orders: ", orders.Amount)
 }
 
 func handleReportParms(r dodoRequestParms) (string, string, string, string) {
@@ -53,12 +58,3 @@ func handleReportParms(r dodoRequestParms) (string, string, string, string) {
 	purpose := r.Purpose
 	return start, end, filePath, purpose
 }
-
-// type report interface {
-// 	handleParms()
-// 	getOrder()
-// }
-// type report struct {
-// 	log util.LogStruct
-// 	db  iface.DataBase
-// }

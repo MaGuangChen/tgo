@@ -8,7 +8,7 @@ import (
 )
 
 type DataBase interface {
-	connect()
+	Connect()
 }
 
 type MySqlDB struct{}
@@ -16,24 +16,18 @@ type Sqlite3DB struct {
 	file string
 }
 
-func (MySqlDB) connect() {
+func (MySqlDB) Connect() *gorm.DB {
 	db, err := gorm.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8")
 	if err != nil {
 		fmt.Println("err is: ", err)
-		return
+	} else {
+		fmt.Println("connect msqdbt1 sucessed")
 	}
 	defer db.Close()
+
+	return db
 }
 
-func (Sqlite3DB) connect(file Sqlite3DB) {
-	db, err := gorm.Open("sqlite3", file)
-	if err != nil {
-		fmt.Println("err is: ", err)
-		return
-	}
-	defer db.Close()
-}
+func (MySqlDB) Operate() {
 
-func ConnectDB(d DataBase) {
-	d.connect()
 }

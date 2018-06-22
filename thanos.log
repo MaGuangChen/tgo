@@ -70,3 +70,24 @@
 2018-06-22T12:04:08.451633243 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
 2018-06-22T13:35:26.891907894 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
 2018-06-22T13:35:53.579466270 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:07:27.633941646 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:07:27.634035722 [Warn] [Controller][Report][Dodo]: fail error sql: unknown driver "mysql" (forgotten import?)
+2018-06-22T17:09:47.034080282 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:11:52.078167532 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:12:11.762633257 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:22:14.844274191 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:22:55.256471908 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:56:53.222873358 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:57:18.191390411 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T17:58:12.599012853 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:03:37.097383701 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:04:45.571684381 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:05:14.452982538 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:21:38.981474410 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:23:15.627019428 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:23:44.433632549 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:24:03.568846097 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:24:29.319685385 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:28:15.702017506 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:29:34.907943924 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
+2018-06-22T18:31:05.604602771 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}

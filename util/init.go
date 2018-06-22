@@ -12,10 +12,3 @@ func (iu *InitUtil) LogInit() LogStruct {
 
 	return log
 }
-
-// func (iu *InitUtil) connectDB() iface.DataBase {
-// 	db := iu.db
-// 	db.Connect()
-
-// 	return db
-// }
