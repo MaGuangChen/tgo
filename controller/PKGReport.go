@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/G-Cool-ThanosGo/iface"
-	"github.com/G-Cool-ThanosGo/model/schema"
+	"github.com/G-Cool-ThanosGo/service"
 	"github.com/G-Cool-ThanosGo/util"
 	"github.com/gin-gonic/gin"
 )
@@ -16,20 +16,12 @@ type exportType struct {
 	date     string
 }
 
-type PKGRequestParms struct {
-	Start    string `json:"start"`
-	End      string `json:"end"`
-	FilePath string `json:"filePath"`
-	Purpose  string `json:"purpose"`
-}
-
 type dodo struct{}
 type fiance struct{}
 
 func DodoReport(c *gin.Context) {
 	// step 1 處理參數
-	req := PKGRequestParms{}
-	start, end, filePath, purpose := handleReportParms(c, req)
+	start, end, filePath, purpose := service.HandleReportParms(c)
 	init := util.InitUtil{}
 	log := init.LogInit()
 	log.Info("[Controller][Report][Dodo]: ", "\nstart: ", start, "\nend: ", end, "\nfilePath: ", filePath, "\npurpose: ", purpose)
@@ -38,18 +30,20 @@ func DodoReport(c *gin.Context) {
 	mysqldb := iface.MySqlDB{}
 	db := iface.ConnectDB(mysqldb)
 
-	var orders []schema.Orders
-	db.Where("id = ?", 375).Find(&orders)
-	fmt.Println("this is CreatedAt: ", orders[0].CreatedAt)
+	parkingRecord := mysqldb.ParkingRecordOperator.GetByExitedAt(db, start, end)
+	parkingRecordDetails := mysqldb.ParkingRecordDetailOperator.GetByParkingRecordID(db, []int{33})
+
+	orders := mysqldb.OrderOperator.GetByID(db, 1679)
+	fmt.Println("this is CaptureTime: ", orders[0].ID)
+
+	// parkingRecordOperator := dboperator.ParkingRecordOperator{}
+	// parkingRecord := parkingRecordOperator.GetByExitedAt(db, start, end)
+	fmt.Println("this is parkingRecord: ", parkingRecord)
+	fmt.Println("this is parkingRecord: ", parkingRecordDetails)
 }
 
-func handleReportParms(c *gin.Context, r PKGRequestParms) (string, string, string, string) {
-	if c.BindJSON(&r) != nil {
-		fmt.Println("[handleReportParms] fail")
-	}
-	start := r.Start
-	end := r.End
-	filePath := r.FilePath
-	purpose := r.Purpose
-	return start, end, filePath, purpose
-}
+// var parkingRecordDetails []schema.ParkingRecordDetails
+// db.Find(&parkingRecordDetails, "order_id in (?)", []int{orders[0].ID})
+
+// fmt.Println("this is CaptureTime: ", o[0].CaptureTime)
+// fmt.Println("this is parkingRecordDetails: ", parkingRecordDetails[0].ParkingRecordID)

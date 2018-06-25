@@ -1,7 +1,7 @@
 package iface
 
 import (
-	"github.com/G-Cool-ThanosGo/model/schema"
+	"github.com/G-Cool-ThanosGo/model/dboperator"
 	"github.com/G-Cool-ThanosGo/util"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -12,8 +12,11 @@ type DataBase interface {
 }
 
 type MySqlDB struct {
-	Orders schema.Orders
+	OrderOperator               dboperator.OrderOperator
+	ParkingRecordOperator       dboperator.ParkingRecordOperator
+	ParkingRecordDetailOperator dboperator.ParkingRecordDetailOperator
 }
+
 type SqliteDB struct{}
 
 func (MySqlDB) connect() *gorm.DB {
