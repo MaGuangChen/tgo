@@ -1,33 +1,28 @@
 package iface
 
 import (
-	"fmt"
-
+	"github.com/G-Cool-ThanosGo/model/schema"
+	"github.com/G-Cool-ThanosGo/util"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 type DataBase interface {
-	Connect()
+	connect() *gorm.DB
 }
 
-type MySqlDB struct{}
-type Sqlite3DB struct {
-	file string
+type MySqlDB struct {
+	Orders schema.Orders
 }
+type SqliteDB struct{}
 
-func (MySqlDB) Connect() *gorm.DB {
-	db, err := gorm.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8")
-	if err != nil {
-		fmt.Println("err is: ", err)
-	} else {
-		fmt.Println("connect msqdbt1 sucessed")
-	}
-	defer db.Close()
-
+func (MySqlDB) connect() *gorm.DB {
+	db, err := gorm.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8&parseTime=true")
+	util.CheckError(err)
 	return db
 }
 
-func (MySqlDB) Operate() {
-
+func ConnectDB(d DataBase) *gorm.DB {
+	db := d.connect()
+	return db
 }

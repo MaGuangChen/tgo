@@ -16,7 +16,7 @@ type exportType struct {
 	date     string
 }
 
-type dodoRequestParms struct {
+type PKGRequestParms struct {
 	Start    string `json:"start"`
 	End      string `json:"end"`
 	FilePath string `json:"filePath"`
@@ -27,31 +27,26 @@ type dodo struct{}
 type fiance struct{}
 
 func DodoReport(c *gin.Context) {
-	req := dodoRequestParms{}
-	if c.BindJSON(&req) != nil {
-		return
-	}
-	start, end, filePath, purpose := handleReportParms(req)
-
+	// step 1 處理參數
+	req := PKGRequestParms{}
+	start, end, filePath, purpose := handleReportParms(c, req)
 	init := util.InitUtil{}
 	log := init.LogInit()
-	log.Info("[Controller][Report][Dodo]: ", req)
-	// step 1 處理參數
-	fmt.Println(start)
-	fmt.Println(end)
-	fmt.Println(filePath)
-	fmt.Println(purpose)
+	log.Info("[Controller][Report][Dodo]: ", "\nstart: ", start, "\nend: ", end, "\nfilePath: ", filePath, "\npurpose: ", purpose)
 
 	// step 2 連線至mysql
 	mysqldb := iface.MySqlDB{}
-	msqdb := mysqldb.Connect()
-	// get order id = 238
-	orders := schema.Orders{}
-	msqdb.Where("id = ?", 375).Find(&orders)
-	fmt.Println("this is orders: ", orders.Amount)
+	db := iface.ConnectDB(mysqldb)
+
+	var orders []schema.Orders
+	db.Where("id = ?", 375).Find(&orders)
+	fmt.Println("this is CreatedAt: ", orders[0].CreatedAt)
 }
 
-func handleReportParms(r dodoRequestParms) (string, string, string, string) {
+func handleReportParms(c *gin.Context, r PKGRequestParms) (string, string, string, string) {
+	if c.BindJSON(&r) != nil {
+		fmt.Println("[handleReportParms] fail")
+	}
 	start := r.Start
 	end := r.End
 	filePath := r.FilePath

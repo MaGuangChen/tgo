@@ -11,7 +11,7 @@ type Orders struct {
 	PaidAmount    int
 	PaymentStatus int
 	InvoiceStatus int
-	CaptureTime   time.Time
-	RefundTime    time.Time
+	CaptureTime   *time.Time
+	RefundTime    *time.Time
 	OrderNumMom   string
 }

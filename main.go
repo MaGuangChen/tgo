@@ -13,7 +13,6 @@ var version = "1.0.0"
 
 func main() {
 	fmt.Printf("[%s] thanosGo version: %s [%s]!!!!!!\n", env, version, build)
-
 	r := gin.Default()
 	r.POST("/report/dodo", controller.DodoReport)
 	r.Run(":5000")

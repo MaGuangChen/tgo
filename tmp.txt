@@ -1,0 +1,75 @@
+// func (MySqlDB) Connect() {
+// 	db, err := sql.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8")
+// 	if err != nil {
+// 		fmt.Println("err is: ", err)
+// 	}
+// 	defer db.Close()
+// 	err = db.Ping()
+
+// 	rows, err2 := db.Query(`SELECT * FROM orders o WHERE o.id = 375 OR o.id = 376;`)
+
+// 	defer rows.Close()
+// 	if err2 != nil {
+// 		fmt.Println("err2 is: ", err2)
+// 	}
+
+// 	cols, _ := rows.Columns()
+// 	// fmt.Println("this is cols: ", cols)
+
+// 	values := make([]sql.RawBytes, len(cols))
+// 	scans := make([]interface{}, len(cols))
+// 	// fmt.Println("this is values: ", values)
+// 	for i := range values {
+// 		scans[i] = &values[i]
+// 	}
+// 	// fmt.Println("this is values2: ", values)
+// 	results := make(map[int]map[string]string)
+
+// 	i := 0
+
+// 	for rows.Next() {
+// 		if err := rows.Scan(scans...); err != nil {
+// 			fmt.Println("Error")
+// 			return
+// 		}
+// 		// fmt.Println("this is values3: ", values)
+// 		row := make(map[string]string)
+// 		for j, v := range values {
+// 			fmt.Println("this is j: ", j)
+// 			fmt.Println("this is v: ", string(v))
+// 			key := cols[j]
+// 			row[key] = string(v)
+// 		}
+// 		results[i] = row
+// 		i++
+// 	}
+
+// 	// 打印结果
+// 	for _, m := range results {
+// 		// fmt.Println(i)
+// 		for k, v := range m {
+// 			fmt.Println("this is record value -- ", k, " : ", v)
+// 		}
+// 		fmt.Println("========================")
+// 	}
+// }
+
+// func (MySqlDB) FindOrder() {
+
+// }
+
+// func (MySqlDB) Operate() {
+
+// }
+
+// db, err := gorm.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8")
+//  else {
+// 	fmt.Println("connect msqdbt1 sucessed")
+// }
+
+// orders := schema.Orders{}
+
+// db.Where("id = ?", 375).Find(&orders)
+// fmt.Println("this is orders: ", orders.Amount)
+
+// return db
