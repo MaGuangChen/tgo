@@ -1,6 +1,7 @@
 package util
 
 import (
+	"fmt"
 	"reflect"
 )
 
@@ -14,5 +15,6 @@ func CheckError(err error) {
 	if err != nil {
 		log := LogStruct{}
 		log.Warn("Error not nil: ", err)
+		fmt.Println("Error is not nil plz check: ", err)
 	}
 }

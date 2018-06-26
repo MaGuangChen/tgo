@@ -1,8 +1,6 @@
 package controller
 
 import (
-	"fmt"
-
 	"github.com/G-Cool-ThanosGo/iface"
 	"github.com/G-Cool-ThanosGo/service"
 	"github.com/G-Cool-ThanosGo/util"
@@ -28,18 +26,23 @@ func DodoReport(c *gin.Context) {
 
 	// step 2 連線至mysql
 	mysqldb := iface.MySqlDB{}
-	db := iface.ConnectDB(mysqldb)
+	// db := iface.ConnectDB(mysqldb)
+	// defer db.Close()
+	rawDB := iface.ConnectDBUseRawSql()
+	defer rawDB.Close()
+	// parkingRecord := mysqldb.ParkingRecordOperator.GetByExitedAt(db, start, end)
+	// parkingRecordDetails := mysqldb.ParkingRecordDetailOperator.GetByParkingRecordID(db, []int{33})
 
-	parkingRecord := mysqldb.ParkingRecordOperator.GetByExitedAt(db, start, end)
-	parkingRecordDetails := mysqldb.ParkingRecordDetailOperator.GetByParkingRecordID(db, []int{33})
+	// orders := mysqldb.OrderOperator.GetByID(db, 1679)
+	// fmt.Println("this is CaptureTime: ", orders[0].ID)
 
-	orders := mysqldb.OrderOperator.GetByID(db, 1679)
-	fmt.Println("this is CaptureTime: ", orders[0].ID)
+	mysqldb.OrderOperator.GetByParkTime(rawDB, start, end)
+	// fmt.Println("this is CaptureTime: ", orders)
 
 	// parkingRecordOperator := dboperator.ParkingRecordOperator{}
 	// parkingRecord := parkingRecordOperator.GetByExitedAt(db, start, end)
-	fmt.Println("this is parkingRecord: ", parkingRecord)
-	fmt.Println("this is parkingRecord: ", parkingRecordDetails)
+	// fmt.Println("this is parkingRecord: ", parkingRecord)
+	// fmt.Println("this is parkingRecord: ", parkingRecordDetails)
 }
 
 // var parkingRecordDetails []schema.ParkingRecordDetails

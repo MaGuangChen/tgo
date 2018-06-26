@@ -1,6 +1,8 @@
 package iface
 
 import (
+	"database/sql"
+
 	"github.com/G-Cool-ThanosGo/model/dboperator"
 	"github.com/G-Cool-ThanosGo/util"
 	"github.com/jinzhu/gorm"
@@ -28,4 +30,12 @@ func (MySqlDB) connect() *gorm.DB {
 func ConnectDB(d DataBase) *gorm.DB {
 	db := d.connect()
 	return db
+}
+
+func ConnectDBUseRawSql() *sql.DB {
+	rawDB, connectErr := sql.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8&parseTime=true")
+	util.CheckError(connectErr)
+	connectErr = rawDB.Ping()
+
+	return rawDB
 }

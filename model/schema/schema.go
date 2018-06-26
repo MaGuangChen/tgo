@@ -3,25 +3,26 @@ package schema
 import "time"
 
 type Orders struct {
-	ID                   int `gorm:"primary_key"`
-	Status               int
-	Amount               int
-	CreatedAt            time.Time
-	OrderNum             string
-	PaidAmount           int
-	PaymentStatus        int
-	InvoiceStatus        int
-	CaptureTime          *time.Time
-	RefundTime           *time.Time
-	OrderNumMom          string
-	AccountID            int
-	ParkingRecordDetails ParkingRecordDetails
+	ID            int `gorm:"primary_key"`
+	Status        int
+	Amount        int
+	CreatedAt     time.Time
+	OrderNum      string
+	PaidAmount    int
+	PaymentStatus int
+	InvoiceStatus int
+	CaptureTime   *time.Time
+	RefundTime    *time.Time
+	OrderNumMom   string
+	AccountID     int
 }
 
 type ParkingRecordDetails struct {
 	ID              int `gorm:"primary_key"`
 	OrderID         int
 	ParkingRecordID int
+	Orders          Orders
+	ParkingRecord   ParkingRecord
 }
 
 type ParkingRecord struct {
