@@ -41,8 +41,9 @@ func CreateSyslogHeaderFormatter(params string) log.FormatterFunc {
 	}
 }
 
+// Config : log config
 func (l *LogStruct) Config(host string) error {
-	var logConfig string = `
+	logConfig := `
 	<seelog>
 		<outputs formatid="main">
 			<console/>

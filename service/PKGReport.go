@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// PKGRequestParms : 請求PKG報表時所帶入的參數
 type PKGRequestParms struct {
 	Start    string `json:"start"`
 	End      string `json:"end"`
@@ -14,6 +15,7 @@ type PKGRequestParms struct {
 	Purpose  string `json:"purpose"`
 }
 
+// HandleReportParms : 處理PKG參數
 func HandleReportParms(c *gin.Context) (time.Time, time.Time, string, string) {
 	r := PKGRequestParms{}
 	if c.BindJSON(&r) != nil {

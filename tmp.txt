@@ -73,3 +73,95 @@
 // fmt.Println("this is orders: ", orders.Amount)
 
 // return db
+
+
+
+
+
+// // ParkingRecordOperator :
+// type ParkingRecordOperator struct{}
+// // ParkingRecordDetailOperator :
+// type ParkingRecordDetailOperator struct{}
+
+// func (ParkingRecordOperator) GetByExitedAt(d *gorm.DB, start time.Time, end time.Time) []schema.ParkingRecord {
+// 	defer d.Close()
+// 	var parkingRecord []schema.ParkingRecord
+// 	d.Find(&parkingRecord, "exited_at >= ? AND exited_at <= ?", start, end)
+
+// 	return parkingRecord
+// }
+
+// func (ParkingRecordDetailOperator) GetByParkingRecordID(d *gorm.DB, prID []int) []schema.ParkingRecordDetails {
+// 	defer d.Close()
+// 	var parkingRecordDetails []schema.ParkingRecordDetails
+// 	d.Find(&parkingRecordDetails, "parking_record_id in (?)", prID)
+
+// 	return parkingRecordDetails
+// }
+
+// `SELECT * FROM msqdbt1.orders od
+// INNER JOIN msqdbt1.parking_record_details  prd
+// ON od.id=prd.order_id
+// INNER JOIN msqdbt1.parking_records pr
+// ON prd.parking_record_id=pr.id
+// WHERE od.STATUS IN (1,2,3,4)
+// AND
+// (
+// 	(
+// 		DATE_FORMAT(DATE_ADD(pr.exited_at,INTERVAL 8 HOUR),'%Y-%m')='2018-01'
+// 		AND DATE_ADD(od.created_at,INTERVAL 8 HOUR) <='2018-02-04'
+// 	)
+//    OR  (
+// 		DATE_FORMAT(DATE_ADD(pr.exited_at,INTERVAL 8 HOUR),'%Y-%m')='2017-12'
+// 		AND
+// 		(
+// 			(
+// 			 DATE_ADD(od.created_at,INTERVAL 8 HOUR) <='2018-02-04'
+// 			 AND DATE_ADD(od.created_at,INTERVAL 8 HOUR) >'2018-01-04'
+// 			)
+// 			OR
+// 			(
+// 				 DATE_ADD(od.refund_time,INTERVAL 8 HOUR) >'2018-01-04'
+// 				AND DATE_ADD(od.refund_time,INTERVAL 8 HOUR) <='2018-02-04'
+// 			)
+// 		)
+// 	)
+// )`
+
+
+
+
+// // Orders : msqdbt1.orders schema
+// type Orders struct {
+// 	ID            int `gorm:"primary_key"`
+// 	Status        int
+// 	Amount        int
+// 	CreatedAt     time.Time
+// 	OrderNum      string
+// 	PaidAmount    int
+// 	PaymentStatus int
+// 	InvoiceStatus int
+// 	CaptureTime   *time.Time
+// 	RefundTime    *time.Time
+// 	OrderNumMom   string
+// 	AccountID     int
+// }
+
+// // ParkingRecordDetails : msqdbt1.parkingRecordDetails schema
+// type ParkingRecordDetails struct {
+// 	ID              int `gorm:"primary_key"`
+// 	OrderID         int
+// 	ParkingRecordID int
+// 	Orders          Orders
+// 	ParkingRecord   ParkingRecord
+// }
+
+// // ParkingRecord : msqdbt1.parkingRecord schema
+// type ParkingRecord struct {
+// 	ID         int `gorm:"primary_key"`
+// 	EnteredAt  *time.Time
+// 	ExitedAt   *time.Time
+// 	LotCode    string
+// 	EntryType  int
+// 	EntryValue string
+// }

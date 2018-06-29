@@ -1,561 +1,356 @@
-2018-06-20T17:58:56.913637718 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:02:24.158530736 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:03:03.414112233 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:05:44.611896640 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:06:18.070230860 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:06:35.362424460 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:06:49.534406444 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:07:19.206156997 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:07:32.780792321 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:08:42.685064219 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:09:29.194699484 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:09:51.055797117 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:10:17.728940031 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:10:42.473916447 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:11:04.801451330 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:11:27.384744104 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:12:49.087702614 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:12:57.732008050 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:13:25.894823635 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:23:14.982683912 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:23:32.654018225 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:23:49.770201741 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:28:02.541964751 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:28:33.785515357 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:29:09.168404336 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:50:02.988068487 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:53:06.303080448 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:53:54.095343456 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:54:11.258853507 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:57:04.041798196 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T18:57:14.929504610 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T19:01:38.836020992 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T19:01:51.966971471 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T19:03:57.210091404 [Info] start server:  version: 1.0.0 build: 
-2018-06-20T19:04:38.236410073 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T16:37:41.229377275 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T16:38:40.680329362 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T16:40:05.846587728 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T16:41:35.086629475 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T16:42:17.969167275 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:00:04.815356834 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:01:00.979813737 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:41:06.981359855 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:42:52.546146423 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:43:35.374733451 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:46:07.802769691 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:49:32.549843428 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:52:02.412712754 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:56:25.849832808 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:57:10.740071630 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T17:57:45.846674549 [Info] start server:  version: 1.0.0 build: 
-2018-06-21T18:00:52.950918149 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:06:23.270328747 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:10:12.667834399 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:12:11.709435391 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:26:39.621313166 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:34:14.059567915 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:34:34.117775224 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:36:28.979284266 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T10:36:50.563617190 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:19:30.482074204 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:19:58.537082076 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:26:49.144877650 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:30:36.009353881 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:30:54.779941822 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:31:40.244704356 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:39:01.151760237 [Info] start server:  version: 1.0.0 build: 
-2018-06-22T11:39:13.853294631 [Info] hah server:  version: 1.0.0 build: 
-2018-06-22T11:59:14.772985150 [Info] hello world dodo report
-2018-06-22T12:04:08.451633243 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T13:35:26.891907894 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T13:35:53.579466270 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:07:27.633941646 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:07:27.634035722 [Warn] [Controller][Report][Dodo]: fail error sql: unknown driver "mysql" (forgotten import?)
-2018-06-22T17:09:47.034080282 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:11:52.078167532 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:12:11.762633257 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:22:14.844274191 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:22:55.256471908 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:56:53.222873358 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:57:18.191390411 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T17:58:12.599012853 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:03:37.097383701 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:04:45.571684381 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:05:14.452982538 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:21:38.981474410 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:23:15.627019428 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:23:44.433632549 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:24:03.568846097 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:24:29.319685385 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:28:15.702017506 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:29:34.907943924 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-22T18:31:05.604602771 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:32:05.168080538 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:35:42.850082369 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:37:15.150326580 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:45:58.318550189 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:46:23.594857075 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:59:25.489019955 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T13:59:58.555509616 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:03:40.266390310 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:09:42.032974552 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:11:46.211946541 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:14:44.072475592 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:15:14.584760386 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:17:44.522698168 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:18:10.497753935 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:19:10.587125065 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:26:36.290430361 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:28:42.359211058 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:34:26.765154797 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:35:38.577759661 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:36:51.895095039 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:37:33.322350079 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:42:58.901059120 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:45:24.242351431 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:48:26.753204287 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:48:57.327931521 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T14:49:28.117864233 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:06:27.303817800 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:06:47.618992943 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:07:12.222244007 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:08:17.077119025 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:09:10.490318327 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:10:27.886769039 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:14:50.562217052 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:17:31.332211119 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:17:55.864395293 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:23:03.685900518 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:23:58.091104314 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:25:31.526582811 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:27:47.822722046 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:44:33.109394638 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:44:59.441641945 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:45:20.298490041 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:56:41.004854882 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:56:59.129641203 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:57:17.026946191 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:58:11.502667628 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:59:25.333848950 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T15:59:47.276320209 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T16:00:06.625339888 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T16:00:20.473879970 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T16:00:53.700423809 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T16:01:12.561667487 [Info] [Controller][Report][Dodo]: {2018-06-17 00:00:00 2018-06-17 23:59:59 /Users/paul/Desktop/newsql.sqlite dodo}
-2018-06-25T16:06:04.272691403 [Info] [Controller][Report][Dodo]: {   }
-2018-06-25T16:15:59.243650846 [Info] [Controller][Report][Dodo]: start: 2018-06-17 00:00:00end: 2018-06-17 23:59:59filePath: /Users/paul/Desktop/newsql.sqlitepurpose: dodo
-2018-06-25T16:16:21.540724090 [Info] [Controller][Report][Dodo]: start: 2018-06-17 00:00:00 end: 2018-06-17 23:59:59 filePath: /Users/paul/Desktop/newsql.sqlite purpose: dodo
-2018-06-25T16:17:49.853881375 [Info] [Controller][Report][Dodo]: 2018-06-17 00:00:002018-06-17 23:59:59/Users/paul/Desktop/newsql.sqlitedodo
-2018-06-25T16:20:34.586263900 [Info] [Controller][Report][Dodo]: 
-2018-06-17 00:00:002018-06-17 23:59:59/Users/paul/Desktop/newsql.sqlitedodo
-2018-06-25T16:21:16.991754476 [Info] [Controller][Report][Dodo]: 
-2018-06-17 00:00:00
-2018-06-17 23:59:59
-/Users/paul/Desktop/newsql.sqlite
-dodo
-2018-06-25T16:22:04.249979191 [Info] [Controller][Report][Dodo]: 
-2018-06-17 00:00:00
-2018-06-17 23:59:59
-/Users/paul/Desktop/newsql.sqlite
-dodo
-2018-06-25T16:22:36.180571750 [Info] [Controller][Report][Dodo]: 
- start: 2018-06-17 00:00:00
- end: 2018-06-17 23:59:59
- filePath: /Users/paul/Desktop/newsql.sqlite
- purpose: dodo
-2018-06-25T16:22:54.961637525 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T16:29:19.297356129 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T16:47:55.303144134 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T16:48:14.891652354 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T17:56:28.404151808 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T18:02:36.269370496 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T18:12:41.538143872 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T18:16:59.322249455 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
-filePath: /Users/paul/Desktop/newsql.sqlite
-purpose: dodo
-2018-06-25T18:17:27.670584376 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+
+2018-06-27T22:21:43.110121106 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T18:17:45.699273606 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:21:46.967267160 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T18:31:02.385914391 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:23:23.698252407 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T18:41:10.423899838 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:23:30.817338973 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T18:42:09.912668970 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:25:54.887666749 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T18:46:31.442811119 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:25:56.318187160 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:34:11.363129732 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:28:31.586402806 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:39:16.112839834 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:28:32.833125161 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:40:15.607306832 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:30:03.077386534 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:40:35.589570952 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:30:06.888062394 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:41:52.223199748 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:30:12.442093733 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:45:45.793321764 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:41:59.931988872 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:48:10.864344271 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-27T22:42:06.528719230 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:49:02.862008117 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:34:57.633882068 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:50:00.966263623 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:35:34.345816964 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:57:39.778121133 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:36:13.377330422 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T19:58:05.267900297 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:40:25.285428564 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:08:44.462935310 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:47:03.684254028 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:09:28.511443956 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:47:44.724189698 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:10:04.820295811 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:47:57.434381237 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:10:22.839536101 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:48:09.592509784 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:11:18.641602263 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:49:20.405915877 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:14:43.759613739 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T11:49:35.274986532 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:15:15.166976889 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T12:43:58.296754696 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:15:26.358167130 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00
-end: 2018-06-17 23:59:59
+2018-06-28T12:44:11.750265566 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-31 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:38:13.938223945 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 23:59:59 +0800 CST
+2018-06-28T12:46:12.916202398 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:39:26.096082557 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 23:59:59 +0800 CST
+2018-06-28T12:50:06.366588349 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:40:06.983027100 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 23:59:59 +0800 CST
+2018-06-28T13:04:09.912988608 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:42:27.503322518 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 23:59:59 +0800 CST
+2018-06-28T13:07:32.673221047 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:43:47.677145354 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T13:08:06.366239693 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:46:41.278639725 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T13:13:32.744967070 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:47:08.709907004 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T13:14:16.302128094 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:48:14.456051855 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:09:01.750897672 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:57:17.405467918 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:21:37.348757450 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:58:33.182853214 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:33:56.107512626 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-25T20:59:23.101383602 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:33:59.199877466 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:09:57.279520470 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:34:03.447079319 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:10:18.124434837 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T14:34:09.069743459 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:11:02.964997879 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:02:49.568658167 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:11:44.120143360 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:06:52.231691448 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:13:09.021655948 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:32:18.237517621 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:13:35.736717904 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:41:23.083500354 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:16:12.701123291 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:42:52.616814102 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:17:51.131261158 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T17:59:09.728875980 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:18:31.238567338 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T18:00:00.847887582 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T11:49:00.825902863 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T19:43:57.517132758 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:38:33.133473468 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T19:44:12.976423864 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:39:25.491048508 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T19:48:59.957475519 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:40:14.471641433 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T19:51:23.723916307 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:42:51.183512878 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:10:38.925535696 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:44:32.767768970 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:11:56.309215741 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:45:52.235305446 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:25:03.079331517 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:46:18.398382078 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:25:26.347700862 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:46:36.159176522 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:26:33.096535615 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:48:41.074151568 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:27:53.445830521 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:49:07.835421746 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:28:39.949212435 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:50:21.350460842 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:29:16.515523188 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:53:38.832545428 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:30:15.752314875 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:54:56.938130313 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:31:05.598461989 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:55:25.296330001 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:31:20.576276719 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:57:10.170027566 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:32:48.224147695 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:58:04.110307320 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:33:26.952368373 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T15:58:12.770568842 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:34:00.718061498 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T16:06:34.367038338 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 08:00:00 +0800 CST
+2018-06-28T20:34:35.002785607 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T16:06:55.798706621 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:35:28.334363475 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T16:09:22.958960528 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:36:26.589986278 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T16:17:19.042357229 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:37:15.458104720 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T16:18:00.005640237 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:37:54.035201858 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T17:51:04.920930421 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:38:12.504946667 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T18:04:49.666745011 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:41:42.185151725 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
-2018-06-26T18:05:28.392879461 [Info] [Controller][Report][Dodo]: 
-start: 2018-06-17 00:00:00 +0800 CST
-end: 2018-06-17 02:00:00 +0800 CST
+2018-06-28T20:41:55.392642095 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 08:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
