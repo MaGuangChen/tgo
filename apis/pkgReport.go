@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 
+	"github.com/G-Cool-ThanosGo/app"
 	"github.com/G-Cool-ThanosGo/iface"
 	"github.com/G-Cool-ThanosGo/service"
-	"github.com/G-Cool-ThanosGo/util"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 )
@@ -18,44 +18,29 @@ type exportType struct {
 	date     string
 }
 
-// DoReport : 給嘟嘟房的報表所需
-func DoReport(c *gin.Context, log util.LogStruct, mysqldb iface.MySQLDB, gdb *gorm.DB, rawDB *sql.DB) {
+// DoReport : 嘟嘟房、會計 報表 park_detail, pref_detail
+func DoReport(c *gin.Context, log app.LogStruct, mysqldb iface.MySQLDB, gdb *gorm.DB, rawDB *sql.DB) {
+	// 處理請求參數
 	start, end, filePath, purpose := service.HandleReportParms(c)
 	log.Info("[Controller][Report]", purpose, " : ", "\nstart: ", start, "\nend: ", end, "\nfilePath: ", filePath, "\npurpose: ", purpose)
 
+	// 取得 pkg orders OrdersID AccountID LotsID ParkingRecordDetailsID
 	pkgOrders, pkgExtraction := mysqldb.PkgOperator.GetByParkTime(rawDB, start, end)
+	fmt.Println("This is orders in DoReport count: ", len(pkgOrders))
 
-	fmt.Println("This is orders count: ", len(pkgOrders))
-	mysqldb.PkgOperator.GetPkgFinance(pkgExtraction, gdb)
-	// fmt.Println("This is park info count: ", len(pkgExtraction.OrdersID))
+	// 透過 order prop 取得 paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords
+	pkgDataByOrdersID := mysqldb.PkgOperator.GetByOrdersID(pkgExtraction, gdb)
+	fmt.Println("this is payment details length: ", len(pkgDataByOrdersID.PaymentDetails))
+
+	// 透過 parking_record_details prop 寫 raw sql
+	mysqldb.PkgOperator.GetByParkingRecordDetailsID(pkgExtraction, gdb)
+	mysqldb.PkgOperator.GetByPaymentDetailsID(pkgDataByOrdersID.PaymentDetailsID, gdb)
+	// 透過payment_details prop 寫 raw sql
 }
 
-// var parkingRecordDetails []schema.ParkingRecordDetails
-// db.Find(&parkingRecordDetails, "order_id in (?)", []int{orders[0].ID})
-
-// fmt.Println("this is CaptureTime: ", o[0].CaptureTime)
-// fmt.Println("this is parkingRecordDetails: ", parkingRecordDetails[0].ParkingRecordID)
-// parkingRecord := mysqldb.ParkingRecordOperator.GetByExitedAt(db, start, end)
-// parkingRecordDetails := mysqldb.ParkingRecordDetailOperator.GetByParkingRecordID(db, []int{33})
-
-// orders := mysqldb.OrderOperator.GetByID(db, 1679)
-// fmt.Println("this is CaptureTime: ", orders[0].ID)
-// parkingRecordOperator := dboperator.ParkingRecordOperator{}
-// parkingRecord := parkingRecordOperator.GetByExitedAt(db, start, end)
-// fmt.Println("this is parkingRecord: ", parkingRecord)
-// fmt.Println("this is parkingRecord: ", parkingRecordDetails)
-
-// // manulOrders := report.mysqldb.OrderOperator.GetT4ManulAndRefund(report.rawDB, report.start, report.end, report.ordersID)
-// fmt.Println(len(report.orders))
-// fmt.Println(len(manulOrders))
-
-// PKGReport :
-// type PKGReport interface {
-// 	HandleReportParms(c *gin.Context)
-// }
-
-// // Dodo : 給嘟嘟房的報表
-// type Dodo struct{}
-
-// // Finance :
-// type Finance struct{}
+// oidChan := make(chan dboperator.GetPkgDataByOrdersID)
+// go func() {
+// pkgDataByOrdersID := mysqldb.PkgOperator.GetByOrdersID(pkgExtraction, gdb)
+// 	oidChan <- pkgDataByOrdersID
+// }()
+// pkgDataByOrdersID := <-oidChan

@@ -4,13 +4,13 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/G-Cool-ThanosGo/util"
+	"github.com/G-Cool-ThanosGo/app"
 )
 
 // ScanAndGetResult : 下 raw sql 時, 公用的返回func
 func ScanAndGetResult(rawDB *sql.DB, sqlSynx string) RecordType {
 	rows, queryErr := rawDB.Query(sqlSynx)
-	util.CheckError(queryErr)
+	app.CheckError(queryErr)
 
 	cols, _ := rows.Columns()
 	values := make([]sql.RawBytes, len(cols))

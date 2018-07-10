@@ -6,6 +6,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/G-Cool-ThanosGo/models/schema"
 	"github.com/jinzhu/gorm"
 )
 
@@ -15,7 +16,7 @@ type PkgOperator struct{}
 // RecordType : 下 raw sql 時返回的 record type
 type RecordType map[int]map[string]string
 
-// PKGOrdersExtractProp : 將pkg
+// PKGOrdersExtractProp : 從 orders 取出相關的 properties
 type PKGOrdersExtractProp struct {
 	OrdersID               []int
 	AccountID              []int
@@ -23,11 +24,27 @@ type PKGOrdersExtractProp struct {
 	ParkingRecordDetailsID []int
 }
 
+// GetPkgDataByOrdersID : 透過 ordersID 取得 pkg 所需資訊
+type GetPkgDataByOrdersID struct {
+	PaymentDetails     []schema.PaymentDetails
+	Invoices           []schema.Invoices
+	InvitationCode     []schema.InvitationCode
+	MemberPointRedeems []schema.MemberPointRedeems
+	OrderCreateRecords []schema.OrderCreateRecords
+	OrderModRecords    []schema.OrderModRecords
+	CreditCardRedeems  []schema.CreditCardRedeems
+	PaymentDetailsID   []int
+}
+
+// GetPkgDataByParkingRecordDetailsID : 透過 parkingRecordDetailsID 取得 pkg 所需資訊
+type GetPkgDataByParkingRecordDetailsID struct {
+	Lots           []schema.Lots
+	ParkFeeRecords []schema.ParkingFeeRecords
+}
+
 // PKGCommonQuery : 出PKG報表的 common query
 func (PkgOperator) pkgCommonQuery() string {
-	return `SELECT 
-	o.status, o.amount, o.created_at, o.order_num, o.paid_amount, o.payment_status, o.invoice_status, o.account_id,
-	prd.id, prd.order_id, prd.lot_id, pr.magic_no
+	return `SELECT o.status, o.amount, o.created_at, o.order_num, o.paid_amount, o.payment_status, o.invoice_status, o.account_id, prd.id, prd.order_id, prd.lot_id, pr.magic_no
 	FROM orders o 
 	JOIN msqdbt1.parking_record_details prd ON prd.order_id = o.id
 	JOIN msqdbt1.parking_records pr ON pr.id = prd.parking_record_id
@@ -97,22 +114,66 @@ func (pkg *PkgOperator) GetT4ManulAndRefund(rawDB *sql.DB, s time.Time, e time.T
 	return result
 }
 
-// GetPkgFinance : 取得PKG報表所需要的財物相關資料
-func (PkgOperator) GetPkgFinance(pkgExtraction PKGOrdersExtractProp, gdb *gorm.DB) {
+// GetByOrdersID : 取得 paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID
+func (PkgOperator) GetByOrdersID(pkgExtraction PKGOrdersExtractProp, gdb *gorm.DB) GetPkgDataByOrdersID {
+	ordersID := pkgExtraction.OrdersID
+	accountID := pkgExtraction.AccountID
+
 	pydOperator := PaymentDetailsOperator{}
-	paymentDetails := pydOperator.GetByOrdersID(pkgExtraction.OrdersID, gdb)
+	paymentDetails := pydOperator.GetByOrdersID(ordersID, gdb)
 
 	invoiceOperator := InvoicesOperator{}
-	invoices := invoiceOperator.GetByOrdersID(pkgExtraction.OrdersID, gdb)
+	invoices := invoiceOperator.GetByOrdersID(ordersID, gdb)
 
 	invitationCodeOperator := InvitationCodeOperator{}
-	invitationCode := invitationCodeOperator.GetByAccountID(pkgExtraction.AccountID, gdb)
+	invitationCode := invitationCodeOperator.GetByAccountID(accountID, gdb)
 
 	memberPointRedeemsOperator := MemberPointRedeemsOperator{}
-	memberPointRedeems := memberPointRedeemsOperator.GetByOrdersID(pkgExtraction.OrdersID, gdb)
+	memberPointRedeems := memberPointRedeemsOperator.GetByOrdersID(ordersID, gdb)
 
-	fmt.Println(paymentDetails[0])
-	fmt.Println(invoices[0])
-	fmt.Println(invitationCode[0])
-	fmt.Println("memberPointRedeems in pkg op: ", memberPointRedeems)
+	orderCreateRecordOperator := OrderCreateRecordOperator{}
+	orderCreateRecords := orderCreateRecordOperator.GetByOrdersID(ordersID, gdb)
+
+	orderModRecordOperator := OrderModRecordOperator{}
+	orderModRecords := orderModRecordOperator.GetByOrdersID(ordersID, gdb)
+
+	ccrOP := CreditCardRedeemsOperator{}
+	creditCardRedeems := ccrOP.GetByOrdersID(ordersID, gdb)
+
+	paymentDetailsID := make([]int, len(paymentDetails))
+	for i, v := range paymentDetails {
+		paymentDetailsID[i] = v.ID
+	}
+
+	result := GetPkgDataByOrdersID{paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID}
+	return result
 }
+
+// GetByParkingRecordDetailsID : 取得 lots, parkFeeRecords
+func (PkgOperator) GetByParkingRecordDetailsID(pkgExtraction PKGOrdersExtractProp, gdb *gorm.DB) GetPkgDataByParkingRecordDetailsID {
+	lotOp := LotsOperator{}
+	lots := lotOp.GetAllByID(pkgExtraction.LotsID, gdb)
+
+	parkingFeeRecordOP := ParkingFeeRecordsOperator{}
+	parkFeeRecords := parkingFeeRecordOP.GetAllByPrdID(pkgExtraction.ParkingRecordDetailsID, gdb)
+
+	result := GetPkgDataByParkingRecordDetailsID{lots, parkFeeRecords}
+	return result
+}
+
+// GetByPaymentDetailsID : creditCardPayment
+func (PkgOperator) GetByPaymentDetailsID(paymentDetailsID []int, db *gorm.DB) {
+	ccpOP := CreditCardPaymentOperator{}
+	creditCardPayment := ccpOP.GetByPydID(paymentDetailsID, db)
+
+	fmt.Println(creditCardPayment)
+}
+
+// creditCardRedeemGenerator(paymentDetails.useCreditCardRedeemIdArray,repo),                  // 3 信用卡優惠
+// creditCardPaymentGenerator(swipeCardPaymentDetails.paymentDetailsIdArray, repo, 'normal'),  // 4 完成訂單 的 刷卡資訊
+
+// ccrOP := CreditCardRedeemsOperator{}
+// creditCardRedeems := ccrOP.GetByOrdersID(paymentDetailsID, db)
+// // fmt.Println("this is paymentDetailsID: ", paymentDetailsID)
+
+// fmt.Println("this is credit card redeems: ", creditCardRedeems)

@@ -14,7 +14,6 @@ type MemberPointRedeemsOperator struct{}
 // GetByAccountID : 以 account_id 取得 邀請碼
 func (InvitationCodeOperator) GetByAccountID(accountsID []int, db *gorm.DB) []schema.InvitationCode {
 	var invitationCode []schema.InvitationCode
-
 	// 若未定義 table sql 會下 from invitation_codes
 	db.Table("invitation_code").Find(&invitationCode, "account_id in (?)", accountsID)
 
@@ -26,6 +25,7 @@ func (MemberPointRedeemsOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []s
 	var memberPointRedeems []schema.MemberPointRedeems
 	db.Find(&memberPointRedeems, "order_id in (?)", ordersID)
 
+	// 若沒有使用會員點數的訂單 則返回都為0的紀錄
 	if len(memberPointRedeems) == 0 {
 		memberPointRedeems = append(memberPointRedeems, schema.MemberPointRedeems{OrderID: 0, GatewayID: 0, Type: 0, DiscountAmount: 0, DiscountHours: 0, BonusPoint: 0})
 	}

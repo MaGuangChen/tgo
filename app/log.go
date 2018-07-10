@@ -1,4 +1,4 @@
-package util
+package app
 
 import (
 	"fmt"
@@ -9,6 +9,7 @@ import (
 	log "github.com/cihub/seelog"
 )
 
+// LogStruct : seelog 的 結構
 type LogStruct struct {
 	logger *log.LoggerInterface
 }
@@ -27,6 +28,7 @@ var levelToSyslogSeverity = map[log.LogLevel]int{
 	log.Off:         7,
 }
 
+// CreateSyslogHeaderFormatter :
 func CreateSyslogHeaderFormatter(params string) log.FormatterFunc {
 	facility := 20
 	i, err := strconv.Atoi(params)
@@ -89,26 +91,32 @@ func (l *LogStruct) Config(host string) error {
 	return nil
 }
 
+// Flush :
 func (l *LogStruct) Flush() {
 	log.Flush()
 }
 
+// Debug :
 func (l *LogStruct) Debug(a ...interface{}) {
 	log.Debug(a...)
 }
 
+// Info :
 func (l *LogStruct) Info(a ...interface{}) {
 	log.Info(a...)
 }
 
+// Error :
 func (l *LogStruct) Error(a ...interface{}) {
 	log.Error(a...)
 }
 
+// Warn :
 func (l *LogStruct) Warn(a ...interface{}) {
 	log.Warn(a...)
 }
 
+// Critical :
 func (l *LogStruct) Critical(a ...interface{}) {
 	log.Critical(a...)
 }

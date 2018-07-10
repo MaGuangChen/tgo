@@ -5,18 +5,32 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-// PaymentDetailsOperator : 操作 msqdbt1.payment_details
-type PaymentDetailsOperator struct{}
+// CreditCardPaymentOperator : 操作 msqdbt1.credit_card_payment
+type CreditCardPaymentOperator struct{}
+
+// CreditCardRedeemsOperator : 操作 msqdbt1.credit_card_redeems
+type CreditCardRedeemsOperator struct{}
 
 // InvoicesOperator : 操作 msqdbt1.invoices
 type InvoicesOperator struct{}
 
-// GetByOrdersID : 依照 order_id 取得付款明細
-func (PaymentDetailsOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []schema.PaymentDetails {
-	var paymentDetails []schema.PaymentDetails
-	db.Find(&paymentDetails, "order_id in (?)", ordersID)
+// PaymentDetailsOperator : 操作 msqdbt1.payment_details
+type PaymentDetailsOperator struct{}
 
-	return paymentDetails
+// GetByPydID : 依照 paymentDetailsID 取得使用的信用卡優惠資訊
+func (CreditCardPaymentOperator) GetByPydID(paymentDetailsID []int, db *gorm.DB) []schema.CreditCardPayment {
+	var creditCardPayment []schema.CreditCardPayment
+	db.Table("credit_card_payment").Find(&creditCardPayment, "payment_detail_id in (?)", paymentDetailsID)
+
+	return creditCardPayment
+}
+
+// GetByOrdersID : 依照 ordersID 取得使用的信用卡優惠資訊
+func (CreditCardRedeemsOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []schema.CreditCardRedeems {
+	var creditCardRedeems []schema.CreditCardRedeems
+	db.Find(&creditCardRedeems, "order_id in (?)", ordersID)
+
+	return creditCardRedeems
 }
 
 // GetByOrdersID : 依照 order_id 取得發票資訊
@@ -25,6 +39,14 @@ func (InvoicesOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []schema.Invo
 	db.Find(&invoices, "order_id in (?)", ordersID)
 
 	return invoices
+}
+
+// GetByOrdersID : 依照 order_id 取得付款明細
+func (PaymentDetailsOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []schema.PaymentDetails {
+	var paymentDetails []schema.PaymentDetails
+	db.Find(&paymentDetails, "order_id in (?)", ordersID)
+
+	return paymentDetails
 }
 
 // type creditCardOperator struct{}
