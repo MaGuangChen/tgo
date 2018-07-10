@@ -2,6 +2,13 @@ package schema
 
 import "time"
 
+// CreditCards : 信用卡資訊
+type CreditCards struct {
+	ID               int `gorm:"primary_key"`
+	BankCode         int
+	CardNumberPublic string
+}
+
 // CreditCardRedeems : 信用卡優惠資訊
 type CreditCardRedeems struct {
 	ID              int `gorm:"primary_key"`
@@ -30,6 +37,16 @@ type GhourDecrements struct {
 	Amount           float64
 }
 
+// GhourIncrements : 酷時增加
+type GhourIncrements struct {
+	ID        int `gorm:"primary_key"`
+	CreatedAt *time.Time
+	AccountID int
+	Amount    float64
+	StartDate *time.Time
+	Reason    string
+}
+
 // Lots : 車廠資訊
 type Lots struct {
 	ID           int `gorm:"primary_key"`
@@ -37,6 +54,16 @@ type Lots struct {
 	Name         string
 	VendorCode   string
 	IsServiceAPI int
+}
+
+// MemberPointRedeems : 會員點數優惠
+type MemberPointRedeems struct {
+	OrderID        int
+	GatewayID      int
+	Type           int
+	DiscountAmount float64
+	DiscountHours  float64
+	BonusPoint     float64
 }
 
 // OrderCreateRecords : 人工 成立/調整 訂單
@@ -82,14 +109,4 @@ type Invoices struct {
 type InvitationCode struct {
 	AccountID int
 	Code      string
-}
-
-// MemberPointRedeems : 會員點數優惠
-type MemberPointRedeems struct {
-	OrderID        int
-	GatewayID      int
-	Type           int
-	DiscountAmount float64
-	DiscountHours  float64
-	BonusPoint     float64
 }

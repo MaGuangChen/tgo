@@ -161,12 +161,36 @@ func (PkgOperator) GetByParkingRecordDetailsID(pkgExtraction PKGOrdersExtractPro
 	return result
 }
 
-// GetByPaymentDetailsID : creditCardPayment
+// GetPkgDataByPaymentDetailsID : 透過 paymentDetailsID 取得
+type GetPkgDataByPaymentDetailsID struct {
+	CreditCardPayment []schema.CreditCardPayment
+	GhourDecrements   []schema.GhourDecrements
+	GhourIncrements   []schema.GhourIncrements
+}
+
+// GetByPaymentDetailsID : creditCardPayment, ghourDecrement, ghourIncID
 func (PkgOperator) GetByPaymentDetailsID(paymentDetailsID []int, db *gorm.DB) {
 	ccpOP := CreditCardPaymentOperator{}
 	creditCardPayment := ccpOP.GetByPydID(paymentDetailsID, db)
+	fmt.Println(len(creditCardPayment))
 
-	fmt.Println(creditCardPayment)
+	ghDecOp := GhourDecrementsOperator{}
+	ghourDecrements := ghDecOp.GetByPydID(paymentDetailsID, db)
+
+	ghourIncID := make([]int, len(ghourDecrements))
+	for i, v := range ghourDecrements {
+		ghourIncID[i] = v.GhourIncrementID
+	}
+
+	ghIncOp := GhourIncrementsOperator{}
+	ghourIncrements := ghIncOp.GetByID(ghourIncID, db)
+
+	fmt.Print(ghourIncrements)
+}
+
+// GetByCreditCardID :
+func (PkgOperator) GetByCreditCardID() {
+
 }
 
 // creditCardRedeemGenerator(paymentDetails.useCreditCardRedeemIdArray,repo),                  // 3 信用卡優惠

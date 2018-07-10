@@ -5,6 +5,9 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// CreditCardsOperator : 操作 msqdbt1.credit_cards
+type CreditCardsOperator struct{}
+
 // CreditCardPaymentOperator : 操作 msqdbt1.credit_card_payment
 type CreditCardPaymentOperator struct{}
 
@@ -16,6 +19,14 @@ type InvoicesOperator struct{}
 
 // PaymentDetailsOperator : 操作 msqdbt1.payment_details
 type PaymentDetailsOperator struct{}
+
+// GetByCardsID : 依照 creditCardsID 取得信用卡資訊
+func (CreditCardsOperator) GetByCardsID(creditCardsID []int, db *gorm.DB) []schema.CreditCards {
+	var creditCards []schema.CreditCards
+	db.Find(&creditCards, "id in (?)", creditCardsID)
+
+	return creditCards
+}
 
 // GetByPydID : 依照 paymentDetailsID 取得使用的信用卡優惠資訊
 func (CreditCardPaymentOperator) GetByPydID(paymentDetailsID []int, db *gorm.DB) []schema.CreditCardPayment {
@@ -48,6 +59,3 @@ func (PaymentDetailsOperator) GetByOrdersID(ordersID []int, db *gorm.DB) []schem
 
 	return paymentDetails
 }
-
-// type creditCardOperator struct{}
-// type creditCard

@@ -1,0 +1,14 @@
+package app
+
+// BinarySearch : 二分搜尋法 O(log n)
+func BinarySearch(list interface{}) {
+
+}
+
+// QuickSort : 快速排序法 O(nlog n)
+func QuickSort(list ...interface{}) interface{} {
+	if len(list) <= 1 {
+		return list
+	}
+	return list
+}

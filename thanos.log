@@ -674,3 +674,13 @@ start: 2018-05-01 00:00:00 +0800 CST
 end: 2018-05-01 12:00:00 +0800 CST
 filePath: /Users/paul/Desktop/newsql.sqlite
 purpose: dodo
+2018-07-10T15:23:45.135306736 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 12:00:00 +0800 CST
+filePath: /Users/paul/Desktop/newsql.sqlite
+purpose: dodo
+2018-07-10T15:24:59.415470992 [Info] [Controller][Report]dodo : 
+start: 2018-05-01 00:00:00 +0800 CST
+end: 2018-05-01 12:00:00 +0800 CST
+filePath: /Users/paul/Desktop/newsql.sqlite
+purpose: dodo
