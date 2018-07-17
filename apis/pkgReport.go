@@ -21,21 +21,14 @@ type exportType struct {
 // DoReport : 嘟嘟房、會計 報表 park_detail, pref_detail
 func DoReport(c *gin.Context, log app.LogStruct, mysqldb iface.MySQLDB, gdb *gorm.DB, rawDB *sql.DB) {
 	// 處理請求參數
-	start, end, filePath, purpose := service.HandleReportParms(c)
+	pkgService := service.PkgService{}
+	start, end, filePath, purpose := pkgService.HandleReportParms(c)
 	log.Info("[Controller][Report]", purpose, " : ", "\nstart: ", start, "\nend: ", end, "\nfilePath: ", filePath, "\npurpose: ", purpose)
 
-	// 取得 pkg orders OrdersID AccountID LotsID ParkingRecordDetailsID
-	pkgOrders, pkgExtraction := mysqldb.PkgOperator.GetByParkTime(rawDB, start, end)
-	fmt.Println("This is orders in DoReport count: ", len(pkgOrders))
-
-	// 透過 order prop 取得 paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords
-	pkgDataByOrdersID := mysqldb.PkgOperator.GetByOrdersID(pkgExtraction, gdb)
-	fmt.Println("this is payment details length: ", len(pkgDataByOrdersID.PaymentDetails))
-
-	// 透過 parking_record_details prop 寫 raw sql
-	mysqldb.PkgOperator.GetByParkingRecordDetailsID(pkgExtraction, gdb)
-	mysqldb.PkgOperator.GetByPaymentDetailsID(pkgDataByOrdersID.PaymentDetailsID, gdb)
-	// 透過payment_details prop 寫 raw sql
+	// 依照 PKG(停車出場時間) 向 DB 要求相關 data
+	pkg := pkgService.GetPkgAllData(start, end, mysqldb, rawDB, gdb)
+	fmt.Println(len(pkg.Orders))
+	// 組合 PKG data
 }
 
 // oidChan := make(chan dboperator.GetPkgDataByOrdersID)

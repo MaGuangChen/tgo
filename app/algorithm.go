@@ -6,9 +6,23 @@ func BinarySearch(list interface{}) {
 }
 
 // QuickSort : 快速排序法 O(nlog n)
-func QuickSort(list ...interface{}) interface{} {
-	if len(list) <= 1 {
-		return list
-	}
-	return list
+type QuickSort interface {
+	Qsort()
 }
+
+// QSIntSlice : 快排 []int
+type QSIntSlice struct{}
+
+// Qsort :
+func (QSIntSlice) Qsort(list []int) {
+
+}
+
+// QuickSort : 快速排序法 O(nlog n)
+// func QuickSort(list ...interface{}) interface{} {
+// 	if len(list) <= 1 {
+// 		return list
+// 	}
+// 	leftList := make()
+// 	return list
+// }

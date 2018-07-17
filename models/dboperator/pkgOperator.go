@@ -2,7 +2,6 @@ package dboperator
 
 import (
 	"database/sql"
-	"fmt"
 	"strconv"
 	"time"
 
@@ -34,12 +33,21 @@ type GetPkgDataByOrdersID struct {
 	OrderModRecords    []schema.OrderModRecords
 	CreditCardRedeems  []schema.CreditCardRedeems
 	PaymentDetailsID   []int
+	RedeemCardID       []int
 }
 
 // GetPkgDataByParkingRecordDetailsID : 透過 parkingRecordDetailsID 取得 pkg 所需資訊
 type GetPkgDataByParkingRecordDetailsID struct {
 	Lots           []schema.Lots
 	ParkFeeRecords []schema.ParkingFeeRecords
+}
+
+// GetPkgDataByPaymentDetailsID : 透過 paymentDetailsID 取得
+type GetPkgDataByPaymentDetailsID struct {
+	CreditCardPayment []schema.CreditCardPayment
+	GhourDecrements   []schema.GhourDecrements
+	GhourIncrements   []schema.GhourIncrements
+	PaymentCardsID    []int
 }
 
 // PKGCommonQuery : 出PKG報表的 common query
@@ -82,7 +90,7 @@ func (pkg *PkgOperator) GetByParkTime(rawDB *sql.DB, s time.Time, e time.Time) (
 	// 組 sql
 	pkgQuery := pkg.pkgCommonQuery()
 	condition := ` WHERE o.status IN (1, 2, 3, 4)
-	AND pr.exited_at >= "` + s.UTC().Format("2006-01-02 15:04:05") + `" AND pr.exited_at <= "` + e.UTC().Format("2006-01-02 15:04:05") + `"`
+	AND pr.exited_at >= "` + s.UTC().Format("2006-01-02 15:04:05") + `" AND pr.exited_at <= "` + e.UTC().Format("2006-01-02 15:04:05") + `"` + `ORDER BY o.id`
 	sqlSynx := pkgQuery + condition
 
 	pkgAndOrders := ScanAndGetResult(rawDB, sqlSynx)
@@ -105,7 +113,7 @@ func (pkg *PkgOperator) GetT4ManulAndRefund(rawDB *sql.DB, s time.Time, e time.T
 		}
 		ordersIDString = ordersIDString + ", " + value
 	}
-	condition3 := ` AND o.id NOT IN (` + ordersIDString + ")"
+	condition3 := ` AND o.id NOT IN (` + ordersIDString + ")" + `ORDER BY o.id`
 
 	sqlSynx := pkgQuery + condition1 + condition3 + condition2
 
@@ -114,7 +122,7 @@ func (pkg *PkgOperator) GetT4ManulAndRefund(rawDB *sql.DB, s time.Time, e time.T
 	return result
 }
 
-// GetByOrdersID : 取得 paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID
+// GetByOrdersID : 取得 paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID, RedeemCardID
 func (PkgOperator) GetByOrdersID(pkgExtraction PKGOrdersExtractProp, gdb *gorm.DB) GetPkgDataByOrdersID {
 	ordersID := pkgExtraction.OrdersID
 	accountID := pkgExtraction.AccountID
@@ -145,7 +153,12 @@ func (PkgOperator) GetByOrdersID(pkgExtraction PKGOrdersExtractProp, gdb *gorm.D
 		paymentDetailsID[i] = v.ID
 	}
 
-	result := GetPkgDataByOrdersID{paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID}
+	redeemCardID := make([]int, len(creditCardRedeems))
+	for index, value := range creditCardRedeems {
+		redeemCardID[index] = value.CreditCardID
+	}
+
+	result := GetPkgDataByOrdersID{paymentDetails, invoices, invitationCode, memberPointRedeems, orderCreateRecords, orderModRecords, creditCardRedeems, paymentDetailsID, redeemCardID}
 	return result
 }
 
@@ -161,18 +174,15 @@ func (PkgOperator) GetByParkingRecordDetailsID(pkgExtraction PKGOrdersExtractPro
 	return result
 }
 
-// GetPkgDataByPaymentDetailsID : 透過 paymentDetailsID 取得
-type GetPkgDataByPaymentDetailsID struct {
-	CreditCardPayment []schema.CreditCardPayment
-	GhourDecrements   []schema.GhourDecrements
-	GhourIncrements   []schema.GhourIncrements
-}
-
-// GetByPaymentDetailsID : creditCardPayment, ghourDecrement, ghourIncID
-func (PkgOperator) GetByPaymentDetailsID(paymentDetailsID []int, db *gorm.DB) {
+// GetByPaymentDetailsID : 透過 paymentDetailsID 取得 creditCardPayment, ghourDecrement, ghourIncID, paymentCardsID
+func (PkgOperator) GetByPaymentDetailsID(paymentDetailsID []int, db *gorm.DB) GetPkgDataByPaymentDetailsID {
 	ccpOP := CreditCardPaymentOperator{}
 	creditCardPayment := ccpOP.GetByPydID(paymentDetailsID, db)
-	fmt.Println(len(creditCardPayment))
+
+	paymentCardsID := make([]int, len(creditCardPayment))
+	for index, value := range creditCardPayment {
+		paymentCardsID[index] = value.CreditCardID
+	}
 
 	ghDecOp := GhourDecrementsOperator{}
 	ghourDecrements := ghDecOp.GetByPydID(paymentDetailsID, db)
@@ -185,19 +195,6 @@ func (PkgOperator) GetByPaymentDetailsID(paymentDetailsID []int, db *gorm.DB) {
 	ghIncOp := GhourIncrementsOperator{}
 	ghourIncrements := ghIncOp.GetByID(ghourIncID, db)
 
-	fmt.Print(ghourIncrements)
+	result := GetPkgDataByPaymentDetailsID{creditCardPayment, ghourDecrements, ghourIncrements, paymentCardsID}
+	return result
 }
-
-// GetByCreditCardID :
-func (PkgOperator) GetByCreditCardID() {
-
-}
-
-// creditCardRedeemGenerator(paymentDetails.useCreditCardRedeemIdArray,repo),                  // 3 信用卡優惠
-// creditCardPaymentGenerator(swipeCardPaymentDetails.paymentDetailsIdArray, repo, 'normal'),  // 4 完成訂單 的 刷卡資訊
-
-// ccrOP := CreditCardRedeemsOperator{}
-// creditCardRedeems := ccrOP.GetByOrdersID(paymentDetailsID, db)
-// // fmt.Println("this is paymentDetailsID: ", paymentDetailsID)
-
-// fmt.Println("this is credit card redeems: ", creditCardRedeems)

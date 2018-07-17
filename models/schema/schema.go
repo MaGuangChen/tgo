@@ -2,6 +2,12 @@ package schema
 
 import "time"
 
+// Banks : 銀行資訊
+type Banks struct {
+	Name string
+	Code int
+}
+
 // CreditCards : 信用卡資訊
 type CreditCards struct {
 	ID               int `gorm:"primary_key"`
@@ -27,6 +33,12 @@ type CreditCardPayment struct {
 	CreditCardID    int
 	AuthCode        string
 	OrderNum        string
+}
+
+// Gateways : 收單行
+type Gateways struct {
+	ID   int
+	Code int
 }
 
 // GhourDecrements : 酷時減少

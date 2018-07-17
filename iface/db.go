@@ -16,11 +16,14 @@ type DataBase interface {
 
 // MySQLDB : MySQLDB
 type MySQLDB struct {
-	PkgOperator                dboperator.PkgOperator
-	PaymentDetailsOperator     dboperator.PaymentDetailsOperator
+	BanksOperator              dboperator.BanksOperator
+	CreditCardsOperator        dboperator.CreditCardsOperator
+	GatewaysOperator           dboperator.GatewaysOperator
 	InvoicesOperator           dboperator.InvoicesOperator
 	InvitationCode             dboperator.InvitationCodeOperator
 	MemberPointRedeemsOperator dboperator.MemberPointRedeemsOperator
+	PkgOperator                dboperator.PkgOperator
+	PaymentDetailsOperator     dboperator.PaymentDetailsOperator
 }
 
 // SqliteDB : SqliteDB
