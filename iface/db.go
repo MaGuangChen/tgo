@@ -30,7 +30,7 @@ type MySQLDB struct {
 type SqliteDB struct{}
 
 func (MySQLDB) connect() *gorm.DB {
-	db, err := gorm.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8&parseTime=true")
+	db, err := gorm.Open("mysql", "paul:5678@tcp(xx.xxx.xxx.xx:3306)/db1?charset=utf8&parseTime=true")
 	app.CheckError(err)
 	return db
 }
@@ -43,7 +43,7 @@ func ConnectDB(d DataBase) *gorm.DB {
 
 // ConnectDBUseRawSQL : 連接DB使用sql package
 func ConnectDBUseRawSQL() *sql.DB {
-	rawDB, connectErr := sql.Open("mysql", "fin_paul:3CzjWc#JY$i@hr@tcp(35.189.162.52:3306)/msqdbt1?charset=utf8&parseTime=true")
+	rawDB, connectErr := sql.Open("mysql", "paul:5678@tcp(xx.xxx.xxx.xx:3306)/db1?charset=utf8&parseTime=true")
 	app.CheckError(connectErr)
 	connectErr = rawDB.Ping()
 
